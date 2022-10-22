@@ -1,5 +1,11 @@
-export default function App() {
+import { Footer } from "../Footer/Footer";
+
+const App = () =>  {
   return (
-    <div>Oi</div>
+    <>
+      <Footer />
+    </>
   );
 }
+
+export { App };
