@@ -15,13 +15,10 @@ const Header = () => {
                         <a className="header_link" href="#">Home</a>
                     </li>
                     <li className="header_list-item">
-                        <a className="header_link" href="#">Lorem</a>
+                        <a className="header_link" href="#">Marcar Consulta</a>
                     </li>
                     <li className="header_list-item">
-                        <a className="header_link" href="#">Lorem</a>
-                    </li>
-                    <li className="header_list-item">
-                        <a className="header_link" href="#">Lorem</a>
+                        <a className="header_link" href="#">Consulta Rápida</a>
                     </li>
                 </ul>
             </nav>
