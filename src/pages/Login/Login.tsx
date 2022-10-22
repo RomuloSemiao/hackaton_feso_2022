@@ -1,8 +1,11 @@
-import { LoginGoogle } from "../../components/LoginGoogle/LoginGoogle";
+import { LoginForm } from "../../components/LoginForm/LoginForm";
+import { ModalWarning } from "../../components/ModalWarning/ModalWarning";
 
 const Login = () => {
   return (
-    <LoginGoogle />
+    <>
+      <LoginForm />
+    </>
   )
 }
 

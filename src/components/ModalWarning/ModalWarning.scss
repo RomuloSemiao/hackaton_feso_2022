@@ -1,0 +1,25 @@
+.ModalWarning {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 15px 12px;
+    background: #fff;
+    border: 1px solid #671045;
+    border-radius: 4px;
+    
+
+    &_text {
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #671045;
+
+        &-date {
+            color: #C9306B
+        }
+    }
+}
