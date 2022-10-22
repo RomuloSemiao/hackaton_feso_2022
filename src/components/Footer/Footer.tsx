@@ -1,4 +1,4 @@
-import { Copyright } from "../../assets/imgs/Copyright";
+import { Copyright } from "../../assets/Copyright";
 
 import "./Footer.scss"
 
