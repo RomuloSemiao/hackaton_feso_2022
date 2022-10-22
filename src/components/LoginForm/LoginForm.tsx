@@ -13,7 +13,7 @@ const LoginForm = () => {
                 <input className="LoginForm_input" type="password" placeholder="Senha" />
 
                 <div className="LoginForm_buttonBox">
-                    <Link className="LoginForm_button LoginForm_button--cad" to="/home">
+                    <Link className="LoginForm_button LoginForm_button--cad" to="/cadastre">
                         CRIAR CONTA
                     </Link>
 
