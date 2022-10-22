@@ -1,5 +1,9 @@
+import { Header } from "../Header/Header";
+
 export default function App() {
   return (
-    <div>Oi</div>
+    <div>
+      <Header/>
+    </div>
   );
 }
