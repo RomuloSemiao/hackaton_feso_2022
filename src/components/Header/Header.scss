@@ -1,8 +1,13 @@
-.header {
+.Header {
     display: flex;
     justify-content: space-between;
     padding: 21px 32px;
     background: #C9306B;
+
+    &_nav {
+        display: flex;
+        align-items: center;
+    }
 
     &_list{
         display: flex;
