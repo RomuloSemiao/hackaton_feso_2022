@@ -1,4 +1,4 @@
-import { Logo } from "../../assets/imgs/Logo";
+import { Logo } from "../../assets/Logo";
 
 import "./Header.scss"
 
