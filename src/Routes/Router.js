@@ -1,20 +1,20 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { FastAppointment } from "../pages/FastAppointment/FastAppointment";
 import { Home } from "../pages/Home/Home";
+import { Login } from "../pages/Login/Login";
 import { MakeAppointment } from "../pages/MakeAppointment/MakeAppointment";
 import { PrivateRoutes } from "./PrivateRoutes";
 
 const Router = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/add" element={<PrivateRoutes />}>
-          <Route path="/add" element={<MakeAppointment />} />
-          <Route path="/add" element={<FastAppointment />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/home" element={<PrivateRoutes />}>
+        <Route path="/home" element={<Home />} />
+        <Route path="/home/make-appointment" element={<MakeAppointment />} />
+        <Route path="/home/fast-appointment" element={<FastAppointment />} />
+      </Route>
+    </Routes>
   )
 }
 
