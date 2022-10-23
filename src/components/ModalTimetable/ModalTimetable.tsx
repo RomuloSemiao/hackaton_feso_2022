@@ -4,13 +4,13 @@ import { DollarSign } from "../../assets/DollarSign";
 import { StarIcon } from "../../assets/StarIcon";
 import "./ModalTimetable.scss";
 
-const ModalTimetable = () => {
+const ModalTimetable = ({ closeModal }: { closeModal: any }) => {
     return ( 
         <div className="ModalBox">
             <div className="ModalTimetable">
                 <div className="ModalTimetable_header">
                     <p className="ModalTimetable_header-text">Consulta</p>
-                    <CloseIcon />
+                    <CloseIcon onClick={() => closeModal()} />
                 </div>
 
                 <div className="ModalTimetable_content">

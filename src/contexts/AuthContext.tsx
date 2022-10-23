@@ -51,7 +51,7 @@ function AuthProvider({ children }: IAuthProvider) {
     localStorage.setItem('user', JSON.stringify(response?.user));
     setLoading(false);
     setAuthorized(true);
-    navigate('/');
+    navigate('/home');
     return response;
   }
 
