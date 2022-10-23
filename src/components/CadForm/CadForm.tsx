@@ -1,29 +1,59 @@
+import { FormEvent, useRef } from "react";
+import { useAuth } from "../../contexts/AuthContext";
 import "./CadForm.scss";
 
 const CadForm = () => {
+    const { handleCreateAccount } = useAuth();
+
+    const name = useRef(null) as any;
+    const lastName = useRef(null) as any;
+    const gender = useRef(null) as any;
+    const age = useRef(null) as any;
+    const height = useRef(null) as any;
+    const weight = useRef(null) as any;
+    const email = useRef(null) as any;
+    const password = useRef(null) as any;
+    const confirmPassword = useRef(null) as any;
+
+    async function createAccount(event: FormEvent) {
+        event.preventDefault();
+    
+        await handleCreateAccount({
+            name: name?.current?.value,
+            lastName: lastName?.current?.value,
+            gender: gender?.current?.value,
+            age: age?.current?.value,
+            height: height?.current?.value,
+            weight: weight?.current?.value,
+            email: email?.current?.value,
+            password: password?.current?.value,
+            confirmPassword: confirmPassword?.current?.value,
+        });
+      }
+
     return (
         <div className="CadForm">
             <h2 className="CadForm_title">Crie sua conta para ser atendido da melhor forma :)</h2>
 
-            <form className="CadForm_formBox" action="submit">
+            <form className="CadForm_formBox" onSubmit={createAccount}>
                 <div className="CadForm_boxInput">
-                    <input className="CadForm_input" type="text" placeholder="Nome" />
+                    <input ref={name} className="CadForm_input" type="text" placeholder="Nome" />
 
-                    <input className="CadForm_input" type="text" placeholder="Sobrenome" />
+                    <input ref={lastName} className="CadForm_input" type="text" placeholder="Sobrenome" />
 
-                    <input className="CadForm_input" type="text" placeholder="Sexo" />
+                    <input ref={gender} className="CadForm_input" type="text" placeholder="Sexo" />
 
-                    <input className="CadForm_input" type="number" placeholder="Idade" />
+                    <input ref={age} className="CadForm_input" type="number" placeholder="Idade" />
 
-                    <input className="CadForm_input" type="number" placeholder="Altura" />
+                    <input ref={height} className="CadForm_input" type="number" placeholder="Altura" />
 
-                    <input className="CadForm_input" type="number" placeholder="Peso" />
+                    <input ref={weight} className="CadForm_input" type="number" placeholder="Peso" />
 
-                    <input className="CadForm_input" type="email" placeholder="E-mail" />
+                    <input ref={email} className="CadForm_input" type="email" placeholder="E-mail" />
 
-                    <input className="CadForm_input" type="password" placeholder="Senha" />
+                    <input ref={password} className="CadForm_input" type="password" placeholder="Senha" />
 
-                    <input className="CadForm_input" type="password" placeholder="Confirmar Senha" />
+                    <input ref={confirmPassword} className="CadForm_input" type="password" placeholder="Confirmar Senha" />
                 </div>
 
                 <button className="CadForm_button" type="submit">
